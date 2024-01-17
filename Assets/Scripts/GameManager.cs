@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +11,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioClip audioClip;
 
-    // Start is called before the first frame update
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(1);
+    }    
+   
     void Start()
     {
         audioClip = GetComponent<AudioClip>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
